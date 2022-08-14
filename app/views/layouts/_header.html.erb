@@ -11,10 +11,6 @@
 
 
     <% if user_signed_in? %>
-      <li class="nav-item">
-        <% if unchecked_notifications.any? %>
-        <i class="fa fa-circle" style="color: gold;"></i>
-        <% end %>
       <li class="nav-item"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn btn-outline-info rounded-pill mx-3 my-1' %></li>
     <% else %>
       <li class="nav-item"><%= link_to "ログイン", new_user_session_path, class: 'btn btn-outline-info rounded-pill mx-3 my-1' %></li>
