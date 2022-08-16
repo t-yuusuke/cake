@@ -1,5 +1,14 @@
-<% @users.each do |user| %>
-<div>
-  <p>ユーザーネーム：<%= user.name %></p>
-</div>
-<% end %>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ユーザーネーム</th>
+    </tr>
+  </thead>
+  <% @users.each do |user| %>
+  <tbody>
+      <tr>
+        <td><%= user.name %></td>
+      </tr>
+  </tbody>
+  <% end %>
+</table>
