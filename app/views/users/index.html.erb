@@ -8,6 +8,7 @@
   <tbody>
       <tr>
         <td><%= user.name %></td>
+        <td><%= link_to "Show", users_path(user.id) %></td>
       </tr>
   </tbody>
   <% end %>
