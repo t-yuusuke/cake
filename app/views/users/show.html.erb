@@ -10,8 +10,8 @@
         <tbody>
           <tr>
             <td><%= @user.name %></td>
-            <td><%= link_to "編集する", edit_user_path(@user.id) %></td>
-            <td><%= link_to "削除する", user_path(@user.id), method: :delete, "date-confirm" => "本当に削除しますか?" %></td>
+            <td><%= link_to "編集する", edit_user_path(@user.id), class: "btn btn-info rounded-pill" %></td>
+            <td><%= link_to "削除する", user_path(@user.id), method: :delete, "date-confirm" => "本当に削除しますか?", class: "btn btn-info rounded-pill" %></td>
           </tr>
         </tbody>
       </table>
