@@ -2,5 +2,5 @@
 
 <% @posts.each do |post| %>
   <h4>タイトル</h4>
-  <span><%= post.title %></span>
+  <span><%= link_to post.title, post_path(post.id) %></span>
 <% end %>
