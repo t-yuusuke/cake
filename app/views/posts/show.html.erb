@@ -1,9 +1,26 @@
-<h3>投稿詳細</h3>
 
-<h4>タイトル</h4>
-<p><%= @post.title %></p>
 
-<h4>本文</h4>
-<p><%= @post.body %></p>
-<%= link_to "編集する", edit_post_path(@post.id), class: "btn btn-info rounded-pill" %>
-<%= link_to "削除する", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか?", class: "btn btn-info rounded-pill" %>
+<div class="container px-5 px-sm-0">
+  <div class="row">
+    <div class="col-md-8 offset-md-1 mt-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>タイトル</th>
+            <th>本文</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%= @post.title %></td>
+            <td><%= @post.body %></td>
+            <td><%= link_to "編集する", edit_post_path(@post.id), class: "btn btn-info rounded-pill" %></td>
+            <td><%= link_to "削除する", post_path(@post.id), method: :delete, "data-confirm" => "本当に削除しますか?", class: "btn btn-info rounded-pill" %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
