@@ -1,6 +1,16 @@
 <h3>投稿一覧</h3>
-
-<% @posts.each do |post| %>
-  <h4>タイトル</h4>
-  <span><%= link_to post.title, post_path(post.id) %></span>
-<% end %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>タイトル</th>
+    </tr>
+  </thead>
+  <% @posts.each do |post| %>
+  <tbody>
+      <tr>
+        <td><%= post.title %></td>
+        <td><%= link_to "詳細", post_path(post.id) %></td>
+      </tr>
+  </tbody>
+  <% end %>
+</table>
