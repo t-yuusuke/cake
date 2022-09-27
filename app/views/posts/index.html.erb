@@ -3,12 +3,14 @@
   <thead>
     <tr>
       <th>タイトル</th>
+      <th>投稿詳細文</th>
     </tr>
   </thead>
   <% @posts.each do |post| %>
   <tbody>
       <tr>
         <td><%= post.title %></td>
+        <td><%= post.body %></td>
         <td><%= link_to "詳細", post_path(post.id) %></td>
       </tr>
   </tbody>
